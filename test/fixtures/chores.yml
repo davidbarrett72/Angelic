@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+cleanroom:
+  name: Clean room
+  complete_by: 2014-03-02 14:52:56
+  completed: false
+
+dishes:
+  name: Load dishwasher
+  complete_by: 2014-03-02 14:52:56
+  completed: false
+
+garbage:
+  name: Load dishwasher
+  complete_by: 2014-03-02 14:52:56
+  completed: false

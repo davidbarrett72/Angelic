@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+dave:
+  name: dave
+  hashed_password: 291c3a7302fe1eaae309d1726fe6b46275fb83e586321090b5cd23ad6085a10e
+  salt: "701103186731200.9838617824139855"
+
+
+one:
+  name: one
+  hashed_password: MyString
+  salt: MyString
+
+two:
+  name: jack
+  hashed_password: MyString
+  salt: MyString

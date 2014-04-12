@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+buster:
+  first_name: Buster
+  last_name: Brown
+  age: 10
+  allowance: 20.00
+
+jasper:
+  first_name: Jasper
+  last_name: Jay
+  age: 12
+  allowance: 10.00

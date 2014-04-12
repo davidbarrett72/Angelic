@@ -1,0 +1,49 @@
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-2"><h3><span class="label label-primary"><%= @child.first_name %>'s Chores</span></h3> </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-4"><h2><%= number_to_currency(@current_earned) %> / <%= number_to_currency(@child.allowance) %></h2></div>
+  </div>
+
+  <table class="table">
+    <th>Task</th>
+    <th>Day</th>
+    <th>Done?</th>
+  <% @chores.each do |c| %>
+    <tr>
+      <td class='<%= c.state %>'><%= c.name %></td>
+
+      <td><%= c.complete_by.strftime("%a, %b %d") %>
+
+        <% if c.complete_by > Time.now %>
+          (<%= time_ago_in_words(c.complete_by) %> from now)
+        <% elsif same_date(c.complete_by, Time.now) %>
+          (Today)
+        <% else %>
+          (<%= time_ago_in_words(c.complete_by) %> ago)
+        <% end %>
+
+      </td>
+      <td>
+        <% if c.completed %>
+
+          <%= link_to undo_chore_path(c), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-thumbs-up"></i>
+          <% end %>
+
+        <% else %>
+          <%= link_to undo_chore_path(c), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-thumbs-down"></i>
+          <% end %>
+        <% end %>
+
+      </td>
+    </tr>
+  <% end %>
+  <table>
+
+</div>
