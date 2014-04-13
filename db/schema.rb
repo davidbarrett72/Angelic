@@ -42,4 +42,29 @@ ActiveRecord::Schema.define(version: 20140306201728) do
     t.datetime "updated_at"
   end
 
+# rewards table
+create_table "rewards", force: true do |t|
+    t.string   "name"
+    t.datetime "purchase_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+ 
+# chore history table
+  create_table "chore_history", force: true do |t|
+    t.integer  "child_id"
+    t.datetime "completed_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end 
+ 
+# purchase history table
+  create_table "purchases", force: true do |t|
+    t.integer   "child_id"
+    t.integer   "reward_id"
+    t.datetime "purchase_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

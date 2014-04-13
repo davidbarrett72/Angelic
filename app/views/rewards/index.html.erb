@@ -1,0 +1,40 @@
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-2"><h3><span class="label label-primary">Rewards</span></h3> </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-4"><h2><%= number_to_currency(@current_earned) %> / <%= number_to_currency(@child.allowance) %></h2></div>
+  </div>
+
+  <table class="table">
+    <th>Reward</th>
+    <th>Done?</th>
+  <% @rewards.each do |r| %>
+    <tr>
+      <td><%= r.name %></td>
+
+      <td>
+
+      </td>
+      <td>
+        <% if r.purchased %>
+
+          <%= link_to undo_reward_path(r), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-thumbs-up"></i>
+          <% end %>
+
+        <% else %>
+          <%= link_to undo_reward_path(r), class: "btn btn-default" do %>
+            <i class="glyphicon glyphicon-thumbs-down"></i>
+          <% end %>
+        <% end %>
+
+      </td>
+    </tr>
+  <% end %>
+  <table>
+
+</div>

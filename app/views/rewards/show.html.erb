@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reward.name %>
+</p>
+
+<p>
+  <strong>Complete by:</strong>
+  <%= @reward.complete_by %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @reward.completed %>
+</p>
+
+<%= link_to 'Edit', edit_chore_path(@reward) %> |
+<%= link_to 'Delete', @reward, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', chore_path %>
