@@ -14,14 +14,13 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-
 development:
   adapter: postgresql
   encoding: unicode
-  #database: okdad_development
+  database: 
   pool: 5
   user: postgres
-  password: Soapy814
+  password: passWord
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,11 +30,13 @@ test:
   encoding: unicode
   database: okdad_test
   pool: 5
-  password: Soapy814
+  user: postgres
+  password: passWord
 
 production:
   adapter: postgresql
   encoding: unicode
   database: okdad_production
   pool: 5
-  password: Soapy814
+  user: postgres
+  password: passWord
